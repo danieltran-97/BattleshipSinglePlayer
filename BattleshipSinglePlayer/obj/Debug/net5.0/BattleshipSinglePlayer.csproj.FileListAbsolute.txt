@@ -1,0 +1,15 @@
+/Users/danieltran/C# Projects/BattleshipSinglePlayer/BattleshipSinglePlayer/bin/Debug/net5.0/BattleshipSinglePlayer.deps.json
+/Users/danieltran/C# Projects/BattleshipSinglePlayer/BattleshipSinglePlayer/bin/Debug/net5.0/BattleshipSinglePlayer.runtimeconfig.json
+/Users/danieltran/C# Projects/BattleshipSinglePlayer/BattleshipSinglePlayer/bin/Debug/net5.0/BattleshipSinglePlayer.runtimeconfig.dev.json
+/Users/danieltran/C# Projects/BattleshipSinglePlayer/BattleshipSinglePlayer/bin/Debug/net5.0/BattleshipSinglePlayer.dll
+/Users/danieltran/C# Projects/BattleshipSinglePlayer/BattleshipSinglePlayer/bin/Debug/net5.0/ref/BattleshipSinglePlayer.dll
+/Users/danieltran/C# Projects/BattleshipSinglePlayer/BattleshipSinglePlayer/bin/Debug/net5.0/BattleshipSinglePlayer.pdb
+/Users/danieltran/C# Projects/BattleshipSinglePlayer/BattleshipSinglePlayer/obj/Debug/net5.0/BattleshipSinglePlayer.csprojAssemblyReference.cache
+/Users/danieltran/C# Projects/BattleshipSinglePlayer/BattleshipSinglePlayer/obj/Debug/net5.0/BattleshipSinglePlayer.GeneratedMSBuildEditorConfig.editorconfig
+/Users/danieltran/C# Projects/BattleshipSinglePlayer/BattleshipSinglePlayer/obj/Debug/net5.0/BattleshipSinglePlayer.AssemblyInfoInputs.cache
+/Users/danieltran/C# Projects/BattleshipSinglePlayer/BattleshipSinglePlayer/obj/Debug/net5.0/BattleshipSinglePlayer.AssemblyInfo.cs
+/Users/danieltran/C# Projects/BattleshipSinglePlayer/BattleshipSinglePlayer/obj/Debug/net5.0/BattleshipSinglePlayer.csproj.CoreCompileInputs.cache
+/Users/danieltran/C# Projects/BattleshipSinglePlayer/BattleshipSinglePlayer/obj/Debug/net5.0/BattleshipSinglePlayer.dll
+/Users/danieltran/C# Projects/BattleshipSinglePlayer/BattleshipSinglePlayer/obj/Debug/net5.0/ref/BattleshipSinglePlayer.dll
+/Users/danieltran/C# Projects/BattleshipSinglePlayer/BattleshipSinglePlayer/obj/Debug/net5.0/BattleshipSinglePlayer.pdb
+/Users/danieltran/C# Projects/BattleshipSinglePlayer/BattleshipSinglePlayer/obj/Debug/net5.0/BattleshipSinglePlayer.genruntimeconfig.cache
