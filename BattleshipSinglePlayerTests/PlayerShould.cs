@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using BattleshipSinglePlayer;
-using BattleshipSinglePlayer.Boards;
 using Xunit;
 
 namespace BattleshipSinglePlayerTests

@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 using System.Text.RegularExpressions;
-using BattleshipSinglePlayer.Boards;
+using BattleshipSinglePlayer.Board;
 using BattleshipSinglePlayer.Ships;
 
 namespace BattleshipSinglePlayer
@@ -9,7 +9,7 @@ namespace BattleshipSinglePlayer
     public class Player
     {
         private string Name { get; set; }
-        public readonly Board Board = new Board();
+        public readonly Board.Board Board = new Board.Board();
         private string _outcome;
 
         public Player(string name)
@@ -33,7 +33,7 @@ namespace BattleshipSinglePlayer
             while (open)
             {
                 var coord = GetCoordinatesFromConsole("Please enter coordinates of where you would like to place your ship");
-                var rowStart = Array.IndexOf(Board.RowLetters,coord[0]);
+                var rowStart = Array.IndexOf(BattleshipSinglePlayer.Board.Board.RowLetters,coord[0]);
                 var columnStart = int.Parse(coord.Substring(1,coord.Length - 1)) - 1;
                 int rowEnd = rowStart, columnEnd = columnStart;
 
@@ -78,7 +78,7 @@ namespace BattleshipSinglePlayer
         public void Attack()
         {
             var coord = GetCoordinatesFromConsole("Please enter coordinates of where you would like attack");
-            var row = Array.IndexOf(Board.RowLetters,coord[0]);
+            var row = Array.IndexOf(BattleshipSinglePlayer.Board.Board.RowLetters,coord[0]);
             var column = int.Parse(coord.Substring(1,coord.Length - 1)) - 1;
 
             var target = Board.Squares.At(row, column);

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using BattleshipSinglePlayer.Boards;
+using BattleshipSinglePlayer.Board;
 using BattleshipSinglePlayer.Ships;
 
 namespace BattleshipSinglePlayer
@@ -10,11 +10,12 @@ namespace BattleshipSinglePlayer
     {
         public readonly Player Player1 = new Player("Player 1");
         private static bool _gameOver = false;
+        
         public void Play()
         {
             Console.WriteLine("Welcome to Battleship single player!\n");
             Player1.DisplayBoard();
-            var input = GetShipFrom("What ship would you like to deploy");
+            var input = GetShipFrom("What ship would you like to deploy?    Please enter any of the following; (Carrier, Cruiser, Battleship, Destroyer, Submarine)");
             Player1.DeployShip(ShipToDeploy(input));
             Player1.DisplayBoard();
             
