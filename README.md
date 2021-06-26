@@ -58,7 +58,7 @@ H |□ □ □ □ □ □ □ □ □ □
 I |□ □ □ □ □ □ □ □ □ □ 
 J |□ □ □ □ □ □ □ □ □ □ 
 ```
-5. You will then be asked to enter a coordinate of where you would like to attack. If you hit the ship the square will mark as ```X``` if you miss the square will be marked as ```M```. Your board will rerender as well as the outcome of your attack above it.
+5. You will then be asked to enter a coordinate of where you would like to attack. If you hit the ship, the square will mark as ```X``` if you miss, the square will be marked as ```M```. Your board will rerender as well as the outcome of your attack above it.
 ```
 Please enter coordinates of where you would like attack
 ```
@@ -94,7 +94,7 @@ H |□ □ □ □ □ □ □ □ □ □
 I |□ □ □ □ □ □ □ □ □ □ 
 J |□ □ □ □ □ □ □ □ □ □ 
 ```
-6. The game will continue until your ship is destroyed. When your ship is destroyed there will be a message stating that you have lost.
+6. The game will continue until your ship is destroyed. When your ship is destroyed, there will be a message stating that you have lost.
 ```
 Player 1's current board: Direct hit!
    1 2 3 4 5 6 7 8 9 10 
