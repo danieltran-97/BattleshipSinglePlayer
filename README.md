@@ -24,6 +24,6 @@ H |□ □ □ □ □ □ □ □ □ □
 I |□ □ □ □ □ □ □ □ □ □ 
 J |□ □ □ □ □ □ □ □ □ □ 
 
-What ship would you like to deploy?    Please below enter any of the following; (Carrier, Cruiser, Battleship, Destroyer, Submarine)
+What ship would you like to deploy?    Please below enter any of the following (Carrier; Cruiser; Battleship; Destroyer; Submarine)
 ```
  
