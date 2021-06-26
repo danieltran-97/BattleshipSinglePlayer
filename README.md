@@ -34,7 +34,7 @@ Please enter 'V' (vertical) or 'H' (horizontal) to choose the orientation of you
 ```
 Please enter coordinates of where you would like to place your ship
 ```
-8. After entering your coordinates the board will render with you ship.
+8. After entering your coordinates the board will render with your ship.
 ```
 Player 1's current board: 
    1 2 3 4 5 6 7 8 9 10 
@@ -44,6 +44,42 @@ B |□ □ □ □ □ □ □ □ □ □
 C |□ □ □ □ □ □ □ □ □ □ 
 D |□ □ □ □ □ □ □ □ □ □ 
 E |□ □ S S S □ □ □ □ □ 
+F |□ □ □ □ □ □ □ □ □ □ 
+G |□ □ □ □ □ □ □ □ □ □ 
+H |□ □ □ □ □ □ □ □ □ □ 
+I |□ □ □ □ □ □ □ □ □ □ 
+J |□ □ □ □ □ □ □ □ □ □ 
+```
+9. You will then be asked to enter a coordinate of where you would like to attack. If you hit the ship the square will mark as ```X``` if you miss the square will be marked as ```M```. Your board will rerender as well as the outcome of your attack above it.
+```
+Please enter coordinates of where you would like attack
+```
+If you miss
+```
+Player 1's current board: You missed!
+   1 2 3 4 5 6 7 8 9 10 
+   ___________________
+A |□ □ □ □ □ □ □ □ □ □ 
+B |□ □ □ □ □ □ □ □ □ □ 
+C |□ □ □ □ □ □ □ □ □ □ 
+D |□ □ □ □ □ □ □ □ □ □ 
+E |□ □ S S S □ □ M □ □ 
+F |□ □ □ □ □ □ □ □ □ □ 
+G |□ □ □ □ □ □ □ □ □ □ 
+H |□ □ □ □ □ □ □ □ □ □ 
+I |□ □ □ □ □ □ □ □ □ □ 
+J |□ □ □ □ □ □ □ □ □ □ 
+```
+If you hit the ship
+```
+Player 1's current board: Direct hit!
+   1 2 3 4 5 6 7 8 9 10 
+   ___________________
+A |□ □ □ □ □ □ □ □ □ □ 
+B |□ □ □ □ □ □ □ □ □ □ 
+C |□ □ □ □ □ □ □ □ □ □ 
+D |□ □ □ □ □ □ □ □ □ □ 
+E |□ □ S S X □ □ □ □ □ 
 F |□ □ □ □ □ □ □ □ □ □ 
 G |□ □ □ □ □ □ □ □ □ □ 
 H |□ □ □ □ □ □ □ □ □ □ 
