@@ -1,4 +1,4 @@
-namespace BattleshipSinglePlayer
+namespace BattleshipSinglePlayer.Boards
 {
     public class Square
     {
@@ -12,13 +12,7 @@ namespace BattleshipSinglePlayer
             (Coordinate.Row % 2 == 0 && Coordinate.Column % 2 == 0)
             || (Coordinate.Row % 2 == 1 && Coordinate.Column % 2 == 1);
 
-        public char Status
-        {
-            get
-            {
-                return (char) StatusType;
-            }
-        }
+        public char Status => (char) StatusType;
 
         public Square(int row, int column)
         {

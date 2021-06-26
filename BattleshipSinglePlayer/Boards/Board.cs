@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace BattleshipSinglePlayer
+namespace BattleshipSinglePlayer.Boards
 {
     public class Board
     {

@@ -1,4 +1,4 @@
-namespace BattleshipSinglePlayer
+namespace BattleshipSinglePlayer.Boards
 {
     public class Coordinate
     {

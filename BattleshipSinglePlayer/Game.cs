@@ -1,32 +1,33 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using BattleshipSinglePlayer.Boards;
 using BattleshipSinglePlayer.Ships;
 
 namespace BattleshipSinglePlayer
 {
     public class Game
     {
-        public Player Player1 = new Player("Player 1");
-        public static bool GameOver = false;
+        private readonly Player _player1 = new Player("Player 1");
+        private static bool _gameOver = false;
         public void Play()
         {
             Console.WriteLine("Welcome to Battleship single player!\n");
-            Player1.DisplayBoard();
+            _player1.DisplayBoard();
             var input = GetShipFrom("What ship would you like to deploy");
-            Player1.DeployShip(ShipToDeploy(input));
-            Player1.DisplayBoard();
+            _player1.DeployShip(ShipToDeploy(input));
+            _player1.DisplayBoard();
             
-            while (!GameOver)
+            while (!_gameOver)
             {
-                Player1.Attack();
-                Player1.DisplayBoard();
-                IsShipDestroyed(Player1.Board.Squares); //Checks if the ship is destroyed
+                _player1.Attack();
+                _player1.DisplayBoard();
+                IsShipDestroyed(_player1.Board.Squares); //Checks if the ship is destroyed
             }
 
         }
 
-        public string GetShipFrom(string message)
+        private string GetShipFrom(string message)
         {
             var success = false;
             var input = string.Empty;
@@ -45,7 +46,8 @@ namespace BattleshipSinglePlayer
 
             return input;
         }
-        public Ship ShipToDeploy(string input)
+
+        private Ship ShipToDeploy(string input)
         {
             if (input == "DESTROYER")
             {
@@ -82,7 +84,7 @@ namespace BattleshipSinglePlayer
             
             if (lose)
             {
-                GameOver = true;
+                _gameOver = true;
             }
 
             return lose;

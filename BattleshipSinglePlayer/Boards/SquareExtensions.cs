@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BattleshipSinglePlayer
+namespace BattleshipSinglePlayer.Boards
 {
     public static class SquareExtensions
     {   
