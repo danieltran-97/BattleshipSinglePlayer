@@ -86,3 +86,21 @@ H |□ □ □ □ □ □ □ □ □ □
 I |□ □ □ □ □ □ □ □ □ □ 
 J |□ □ □ □ □ □ □ □ □ □ 
 ```
+10. The game will continue until your ship is destroyed. When your ship is destroyed there will be a message stating that you have lost.
+```
+Player 1's current board: Direct hit!
+   1 2 3 4 5 6 7 8 9 10 
+   ___________________
+A |□ □ □ □ □ □ □ □ □ □ 
+B |□ □ □ □ □ □ □ □ □ □ 
+C |□ □ □ □ □ □ □ □ □ □ 
+D |□ □ □ □ □ □ □ □ □ □ 
+E |□ □ X X X □ □ □ □ □ 
+F |□ □ □ □ □ □ □ □ □ □ 
+G |□ □ □ □ □ □ □ □ □ □ 
+H |□ □ □ □ □ □ □ □ □ □ 
+I |□ □ □ □ □ □ □ □ □ □ 
+J |□ □ □ □ □ □ □ □ □ □ 
+
+All your ships have been sunk, you have lost
+ ```
