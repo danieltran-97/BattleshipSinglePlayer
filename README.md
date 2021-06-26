@@ -102,5 +102,5 @@ H |□ □ □ □ □ □ □ □ □ □
 I |□ □ □ □ □ □ □ □ □ □ 
 J |□ □ □ □ □ □ □ □ □ □ 
 
-All your ships have been sunk, you have lost
+Your ship has been sunk, you have lost
  ```
