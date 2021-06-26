@@ -6,7 +6,7 @@
 4. Open your terminal window in VS code and enter the following commands in order
   - ```cd BattleshipSinglePlayer```
   - ```dotnet run```
-
+## Game
 | Ship | Symbol | Width |
 | -----| ------ | ----- |
 | Carrier| A  | 5 |
