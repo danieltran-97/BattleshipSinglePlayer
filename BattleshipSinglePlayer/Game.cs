@@ -8,23 +8,24 @@ namespace BattleshipSinglePlayer
 {
     public class Game
     {
-        private readonly Player _player1 = new Player("Player 1");
+        public readonly Player Player1 = new Player("Player 1");
         private static bool _gameOver = false;
         public void Play()
         {
             Console.WriteLine("Welcome to Battleship single player!\n");
-            _player1.DisplayBoard();
+            Player1.DisplayBoard();
             var input = GetShipFrom("What ship would you like to deploy");
-            _player1.DeployShip(ShipToDeploy(input));
-            _player1.DisplayBoard();
+            Player1.DeployShip(ShipToDeploy(input));
+            Player1.DisplayBoard();
             
             while (!_gameOver)
             {
-                _player1.Attack();
-                _player1.DisplayBoard();
-                IsShipDestroyed(_player1.Board.Squares); //Checks if the ship is destroyed
+                Player1.Attack();
+                Player1.DisplayBoard();
+                IsShipDestroyed(Player1.Board.Squares); //Checks if the ship is destroyed
             }
 
+            Console.WriteLine("All your ships have been sunk, you have lost");
         }
 
         private string GetShipFrom(string message)
@@ -47,30 +48,22 @@ namespace BattleshipSinglePlayer
             return input;
         }
 
-        private Ship ShipToDeploy(string input)
+        public Ship ShipToDeploy(string input)
         {
-            if (input == "DESTROYER")
+            switch (input)
             {
-                return new Destroyer();
-            } 
-            else if (input == "CARRIER")
-            {
-                return new Carrier();
-            } else if (input == "CRUISER")
-            {
-                return new Cruiser();
-            }
-            else if (input == "BATTLESHIP")
-            {
-                return new Battleship();
-            }
-            else if (input == "SUBMARINE")
-            {
-                return new Submarine();
-            }
-            else
-            {
-                return new Ship();
+                case "DESTROYER":
+                    return new Destroyer();
+                case "CARRIER":
+                    return new Carrier();
+                case "CRUISER":
+                    return new Cruiser();
+                case "BATTLESHIP":
+                    return new Battleship();
+                case "SUBMARINE":
+                    return new Submarine();
+                default:
+                    return new Ship();
             }
         }
         

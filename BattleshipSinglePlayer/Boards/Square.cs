@@ -5,7 +5,7 @@ namespace BattleshipSinglePlayer.Boards
         public StatusType StatusType { get; set; }
         public Coordinate Coordinate { get; }
         
-        public bool Occupied =>
+        public bool IsOccupied =>
             StatusType is StatusType.Battleship or StatusType.Carrier or StatusType.Cruiser or StatusType.Destroyer or StatusType.Submarine;
 
         public bool RandomSlotAvailable =>

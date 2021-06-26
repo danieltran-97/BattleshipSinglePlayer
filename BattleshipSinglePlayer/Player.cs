@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using BattleshipSinglePlayer.Boards;
@@ -11,20 +10,11 @@ namespace BattleshipSinglePlayer
     {
         private string Name { get; set; }
         public readonly Board Board = new Board();
-        private List<Ship> _ships;
         private string _outcome;
 
         public Player(string name)
         {
             Name = name;
-            _ships = new List<Ship>() 
-            {
-                new Battleship(),
-                new Carrier(), 
-                new Cruiser(),
-                new Destroyer(),
-                new Submarine()
-            };
         }
 
         public void DisplayBoard()
@@ -71,7 +61,7 @@ namespace BattleshipSinglePlayer
 
                 var affectedSquares = Board.Squares.Range(rowStart, columnStart, rowEnd, columnEnd);
                 
-                if (affectedSquares.Any(x => x.Occupied))
+                if (affectedSquares.Any(x => x.IsOccupied))
                 {
                     open = true;
                     continue;
@@ -96,6 +86,11 @@ namespace BattleshipSinglePlayer
             target.StatusType = target.StatusType == StatusType.Empty ? StatusType.Miss : StatusType.Hit;
             
             _outcome = $"{(target.StatusType == StatusType.Miss ? "You missed!" : "Direct hit!")}";
+
+            if (target.StatusType == StatusType.Miss)
+            {
+                _outcome = "You missed!";
+            }
         }
 
         private string GetOrientationFromConsole(string message)
