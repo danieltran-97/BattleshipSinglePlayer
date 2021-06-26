@@ -9,8 +9,9 @@ namespace BattleshipSinglePlayer
     public class Player
     {
         private string Name { get; set; }
-        private Board _board = new Board();
+        public Board Board = new Board();
         public List<Ship> Ships;
+        public string Outcome;
 
         public Player(string name)
         {
@@ -27,8 +28,8 @@ namespace BattleshipSinglePlayer
 
         public void DisplayBoard()
         {
-            Console.WriteLine($"{Name}'s current board:");
-            _board.PrintBoard(Board.Squares);
+            Console.WriteLine($"{Name}'s current board: {Outcome}");
+            Board.PrintBoard(Board.Squares);
         }
 
         public void DeployShip(Ship ship)
@@ -67,6 +68,7 @@ namespace BattleshipSinglePlayer
                 }
 
                 var affectedSquares = Board.Squares.Range(rowStart, columnStart, rowEnd, columnEnd);
+                
                 if (affectedSquares.Any(x => x.Occupied))
                 {
                     open = true;
@@ -90,8 +92,8 @@ namespace BattleshipSinglePlayer
             var target = Board.Squares.At(row, column);
 
             target.StatusType = target.StatusType == StatusType.Empty ? StatusType.Miss : StatusType.Hit;
-
-            Console.WriteLine($"{(target.StatusType == StatusType.Miss ? "You missed!" : "Direct hit!")}");
+            
+            Outcome = $"{(target.StatusType == StatusType.Miss ? "You missed!" : "Direct hit!")}";
         }
 
         public string GetOrientationFromConsole(string message)

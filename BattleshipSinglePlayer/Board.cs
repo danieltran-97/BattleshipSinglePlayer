@@ -5,7 +5,7 @@ namespace BattleshipSinglePlayer
 {
     public class Board
     {
-        public static List<Square> Squares { get; set; }
+        public List<Square> Squares { get; }
 
         public static readonly char[] RowLetters = new char[10] { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
 

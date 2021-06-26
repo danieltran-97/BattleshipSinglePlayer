@@ -11,6 +11,7 @@ namespace BattleshipSinglePlayer
         public static bool GameOver = false;
         public void Play()
         {
+            Console.WriteLine("Welcome to Battleship single player!\n");
             Player1.DisplayBoard();
             var input = GetShipFrom("What ship would you like to deploy");
             Player1.DeployShip(ShipToDeploy(input));
@@ -20,7 +21,7 @@ namespace BattleshipSinglePlayer
             {
                 Player1.Attack();
                 Player1.DisplayBoard();
-                Lose(Board.Squares);
+                IsShipDestroyed(Player1.Board.Squares); //Checks if the ship is destroyed
             }
 
         }
@@ -71,7 +72,7 @@ namespace BattleshipSinglePlayer
             }
         }
         
-        private static bool Lose(List<Square> squares)
+        private static bool IsShipDestroyed(List<Square> squares)
         {
             var board = squares.Where(s => s.StatusType == StatusType.Empty
                                            || s.StatusType == StatusType.Miss

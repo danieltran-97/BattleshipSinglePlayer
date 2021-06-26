@@ -11,10 +11,4 @@ namespace BattleshipSinglePlayer
         Hit = 'X',
         Miss = 'M'
     }
-
-    public enum ShotOutcome
-    {
-        Hit,
-        Miss
-    }
 }
