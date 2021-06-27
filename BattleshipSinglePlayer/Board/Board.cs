@@ -40,7 +40,7 @@ namespace BattleshipSinglePlayer
                 Console.Write("{0} |", RowLetters[i]);
                 for (var j = 0; j < 10; j++)
                 {
-                    Console.Write((string) "{0} ", boardSlots.At(i, j).Status);
+                    Console.Write("{0} ", boardSlots.At(i, j).Status);
                 }
                 Console.WriteLine();
             }
