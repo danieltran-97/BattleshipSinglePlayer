@@ -7,7 +7,7 @@ namespace BattleshipSinglePlayer
 {
     public class Player
     {
-        private string Name { get; set; }
+        private string Name { get; }
         public readonly Board Board = new Board();
         private string _outcome;
 
@@ -53,7 +53,6 @@ namespace BattleshipSinglePlayer
 
                 if (rowEnd > 10 || columnEnd > 10)
                 {
-                    open = true;
                     Console.WriteLine("Ship is not completely inside board!");
                     continue;
                 }
@@ -62,7 +61,6 @@ namespace BattleshipSinglePlayer
                 
                 if (affectedSquares.Any(x => x.IsOccupied))
                 {
-                    open = true;
                     continue;
                 }
 
@@ -81,7 +79,7 @@ namespace BattleshipSinglePlayer
             while (!success)
             {
                 var coord = GetCoordinatesFromConsole("Please enter coordinates of where you would like attack");
-                var row = Array.IndexOf(BattleshipSinglePlayer.Board.RowLetters,coord[0]);
+                var row = Array.IndexOf(Board.RowLetters,coord[0]);
                 var column = int.Parse(coord.Substring(1,coord.Length - 1)) - 1;
                 target = Board.Squares.At(row, column);
                 

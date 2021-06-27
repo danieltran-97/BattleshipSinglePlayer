@@ -7,7 +7,7 @@ namespace BattleshipSinglePlayer
     {
         public List<Square> Squares { get; }
 
-        public static readonly char[] RowLetters = new char[10] { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
+        public static readonly char[] RowLetters = new char[] { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
 
         public  Board()
         {
@@ -24,7 +24,7 @@ namespace BattleshipSinglePlayer
 
         public void PrintBoard(List<Square> boardSlots)
         {
-            var columnNumber = new string[10] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
+            var columnNumber = new string[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
 
             Console.Write("   ");
             
@@ -40,7 +40,7 @@ namespace BattleshipSinglePlayer
                 Console.Write("{0} |", RowLetters[i]);
                 for (var j = 0; j < 10; j++)
                 {
-                    Console.Write((string) "{0} ", (object?) boardSlots.At(i, j).Status);
+                    Console.Write((string) "{0} ", boardSlots.At(i, j).Status);
                 }
                 Console.WriteLine();
             }

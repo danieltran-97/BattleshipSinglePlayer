@@ -8,13 +8,13 @@ namespace BattleshipSinglePlayer
     public class Game
     {
         public readonly Player Player1 = new Player("Player 1");
-        private static bool _gameOver = false;
+        private static bool _gameOver;
         
         public void Play()
         {
             Console.WriteLine("Welcome to Battleship single player!\n");
             Player1.DisplayBoard();
-            var input = GetShipFrom("What ship would you like to deploy?    Please enter any of the following; (Carrier, Cruiser, Battleship, Destroyer, Submarine)");
+            var input = GetShipFromConsole("What ship would you like to deploy?    Please enter any of the following; (Carrier, Cruiser, Battleship, Destroyer, Submarine)");
             Player1.DeployShip(ShipToDeploy(input));
             Player1.DisplayBoard();
             
@@ -28,7 +28,7 @@ namespace BattleshipSinglePlayer
             Console.WriteLine("All your ships have been sunk, you have lost");
         }
 
-        private string GetShipFrom(string message)
+        private string GetShipFromConsole(string message)
         {
             var success = false;
             var input = string.Empty;
@@ -67,7 +67,7 @@ namespace BattleshipSinglePlayer
             }
         }
         
-        private static void IsShipDestroyed(List<Square> squares)
+        private static bool IsShipDestroyed(List<Square> squares)
         {
             var board = squares.Where(s => s.StatusType == StatusType.Empty
                                            || s.StatusType == StatusType.Miss
@@ -79,6 +79,8 @@ namespace BattleshipSinglePlayer
             {
                 _gameOver = true;
             }
+
+            return lose;
         }
 
     }
