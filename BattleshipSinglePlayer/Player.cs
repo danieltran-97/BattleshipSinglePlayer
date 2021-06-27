@@ -77,11 +77,24 @@ namespace BattleshipSinglePlayer
 
         public void Attack()
         {
-            var coord = GetCoordinatesFromConsole("Please enter coordinates of where you would like attack");
-            var row = Array.IndexOf(BattleshipSinglePlayer.Board.Board.RowLetters,coord[0]);
-            var column = int.Parse(coord.Substring(1,coord.Length - 1)) - 1;
+            var success = false;
+            var target = new Square(0,0);
+            while (!success)
+            {
+                var coord = GetCoordinatesFromConsole("Please enter coordinates of where you would like attack");
+                var row = Array.IndexOf(BattleshipSinglePlayer.Board.Board.RowLetters,coord[0]);
+                var column = int.Parse(coord.Substring(1,coord.Length - 1)) - 1;
+                target = Board.Squares.At(row, column);
+                
+                success = target.StatusType != StatusType.Hit && target.StatusType != StatusType.Miss;
 
-            var target = Board.Squares.At(row, column);
+                if (!success)
+                {
+                    Console.WriteLine("An attack has already been placed here");
+                }
+
+            }
+            
 
             target.StatusType = target.StatusType == StatusType.Empty ? StatusType.Miss : StatusType.Hit;
             

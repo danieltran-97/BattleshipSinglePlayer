@@ -68,7 +68,7 @@ namespace BattleshipSinglePlayer
             }
         }
         
-        private static bool IsShipDestroyed(List<Square> squares)
+        private static void IsShipDestroyed(List<Square> squares)
         {
             var board = squares.Where(s => s.StatusType == StatusType.Empty
                                            || s.StatusType == StatusType.Miss
@@ -80,10 +80,7 @@ namespace BattleshipSinglePlayer
             {
                 _gameOver = true;
             }
-
-            return lose;
         }
-        
 
     }
 }
