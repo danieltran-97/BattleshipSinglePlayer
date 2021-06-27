@@ -14,11 +14,11 @@ namespace BattleshipSinglePlayer
         {
             Console.WriteLine("Welcome to Battleship single player!\n");
             Player1.DisplayBoard();
-            var input = GetShipFromConsole("What ship would you like to deploy?    Please enter any of the following; (Carrier, Cruiser, Battleship, Destroyer, Submarine)");
+            var input = GetShipFromConsole("What ship would you like to deploy?  Please enter any of the following; (Carrier, Cruiser, Battleship, Destroyer, Submarine)");
             Player1.DeployShip(ShipToDeploy(input));
             Player1.DisplayBoard();
             
-            while (!_gameOver)
+            while (!_gameOver) // Game continues until game is over 
             {
                 Player1.Attack();
                 Player1.DisplayBoard();
@@ -67,17 +67,19 @@ namespace BattleshipSinglePlayer
             }
         }
         
+        // Determines if ship is destroyed
         private static bool IsShipDestroyed(List<Square> squares)
         {
+            // Linq query collects squares that are either empty, miss or hit
             var board = squares.Where(s => s.StatusType == StatusType.Empty
                                            || s.StatusType == StatusType.Miss
                                            || s.StatusType == StatusType.Hit).ToList();
-            
+            // if the board (list of squares) contains 100 means that the ship is destroyed
             var lose = board.Count == 100;
             
             if (lose)
             {
-                _gameOver = true;
+                _gameOver = true; //sets the boolean property to true or false
             }
 
             return lose;

@@ -18,7 +18,7 @@ namespace BattleshipSinglePlayer
 
         public void DisplayBoard()
         {
-            Console.WriteLine($"{Name}'s current board: {_outcome}");
+            Console.WriteLine($"{Name}'s current board: {_outcome}"); // Indicates whether attack is miss or hit
             Board.PrintBoard(Board.Squares);
         }
 
@@ -27,7 +27,7 @@ namespace BattleshipSinglePlayer
  
             var open = true;
             var input = GetOrientationFromConsole("Please enter 'V' (vertical) or 'H' (horizontal) to choose the orientation of your ship placement");
-            var orientation = input == "V" ? 0 : 1; // 0 = horizontal
+            var orientation = input == "V" ? 0 : 1; // 0 = horizontal , 1 = vertical
             
             while (open)
             {
@@ -51,12 +51,12 @@ namespace BattleshipSinglePlayer
                     }
                 }
 
-                if (rowEnd > 10 || columnEnd > 10)
+                if (rowEnd > 10 || columnEnd > 10) // Retry if ship is partially outside board
                 {
                     Console.WriteLine("Ship is not completely inside board!");
                     continue;
                 }
-
+                // Check if specified squares are occupied
                 var affectedSquares = Board.Squares.Range(rowStart, columnStart, rowEnd, columnEnd);
                 
                 if (affectedSquares.Any(x => x.IsOccupied))
@@ -76,7 +76,8 @@ namespace BattleshipSinglePlayer
         {
             var success = false;
             var target = new Square(0,0);
-            while (!success)
+            
+            while (!success) // Retry if an attack has already been placed in the position
             {
                 var coord = GetCoordinatesFromConsole("Please enter coordinates of where you would like attack");
                 var row = Array.IndexOf(Board.RowLetters,coord[0]);
@@ -129,7 +130,7 @@ namespace BattleshipSinglePlayer
             var input = string.Empty;
             var reg = new Regex("^[A-J][0-9](?:[0])?");
 
-            while (!success)
+            while (!success) // Retry if coordinate input is not in correct format
             {
                 Console.WriteLine(message);
                 input = Console.ReadLine().ToUpper();
