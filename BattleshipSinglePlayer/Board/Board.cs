@@ -22,7 +22,7 @@ namespace BattleshipSinglePlayer
             }
         }
 
-        public void PrintBoard(List<Square> boardSlots)
+        public void PrintBoard(List<Square> boardSquares)
         {
             var columnNumber = new string[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
 
@@ -40,7 +40,7 @@ namespace BattleshipSinglePlayer
                 Console.Write("{0} |", RowLetters[i]);
                 for (var j = 0; j < 10; j++)
                 {
-                    Console.Write("{0} ", boardSlots.At(i, j).Status);
+                    Console.Write("{0} ", boardSquares.At(i, j).Status);
                 }
                 Console.WriteLine();
             }
