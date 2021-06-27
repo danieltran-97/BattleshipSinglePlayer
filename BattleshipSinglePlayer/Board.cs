@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace BattleshipSinglePlayer.Board
+namespace BattleshipSinglePlayer
 {
     public class Board
     {
@@ -40,7 +40,7 @@ namespace BattleshipSinglePlayer.Board
                 Console.Write("{0} |", RowLetters[i]);
                 for (var j = 0; j < 10; j++)
                 {
-                    Console.Write("{0} ", boardSlots.At(i, j).Status);
+                    Console.Write((string) "{0} ", (object?) boardSlots.At(i, j).Status);
                 }
                 Console.WriteLine();
             }

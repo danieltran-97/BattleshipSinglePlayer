@@ -1,4 +1,4 @@
-namespace BattleshipSinglePlayer.Board
+namespace BattleshipSinglePlayer
 {
     public class Square
     {

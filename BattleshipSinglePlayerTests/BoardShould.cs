@@ -1,4 +1,4 @@
-using BattleshipSinglePlayer.Board;
+using BattleshipSinglePlayer;
 using Xunit;
 
 namespace BattleshipSinglePlayerTests
