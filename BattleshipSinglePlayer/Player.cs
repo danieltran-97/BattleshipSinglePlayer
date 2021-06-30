@@ -97,11 +97,6 @@ namespace BattleshipSinglePlayer
             target.StatusType = target.StatusType == StatusType.Empty ? StatusType.Miss : StatusType.Hit;
             
             _outcome = $"{(target.StatusType == StatusType.Miss ? "You missed!" : "Direct hit!")}";
-
-            if (target.StatusType == StatusType.Miss)
-            {
-                _outcome = "You missed!";
-            }
         }
 
         private string GetOrientationFromConsole(string message)
